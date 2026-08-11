@@ -1,170 +1,164 @@
-# ExpenseFlow 💰
+💰 ExpenseFlow
 
-> A full-stack expense and invoice management application with authentication, expense tracking, dashboard analytics, and profile management.
+Smart Expense Management Dashboard
 
-ExpenseFlow is a full-stack web application designed to help users manage and monitor their expenses through a clean, interactive dashboard.
+A full-stack expense management application built with React, Node.js, Express, Prisma, and PostgreSQL.
 
-The project uses **React + TypeScript** for the frontend and **Node.js + Express + Prisma + PostgreSQL** for the backend, with JWT-based authentication for securing user-specific data.
+Track expenses • Analyze spending • Manage your profile • Stay organized
 
----
+<br/>
 
-## 🚀 Live Project
 
-🔗 **GitHub Repository:**  
-https://github.com/Sanju701ydv/ExpenseFlow
 
----
+<br/>
 
-## 📌 Project Overview
+🔐 Secure Authentication   •   📊 Interactive Dashboard   •   💳 Expense Management
 
-ExpenseFlow provides a centralized interface for managing personal expenses.
+</div>
 
-Users can:
+📌 About
 
-- Register and log in securely
-- View their expense dashboard
-- Track total expenses
-- Monitor total spending amount
-- View individual expense records
-- Add, update, and delete expenses
-- Organize expenses by category
-- View profile information
-- Edit profile details
-- Log out securely
-- Access protected routes using JWT authentication
+ExpenseFlow is a full-stack web application designed to make personal expense tracking simple and visual.
 
-The application follows a client-server architecture where the React frontend communicates with a REST API built using Node.js and Express.
+Users can create an account, securely log in, add and manage expenses, view spending summaries, analyze expenses by category, and manage their profile from one dashboard.
 
----
+✨ What You Can Do
 
-## ✨ Key Features
+Feature
 
-### 🔐 Authentication
+Description
 
-- User registration
-- User login
-- JWT-based authentication
-- Protected API routes
-- Token-based authorization
-- Secure logout
-- User-specific expense access
+🔐 Authentication
 
-### 📊 Dashboard
+Register and login with JWT-based authentication
 
-The dashboard provides an overview of the user's financial activity.
+📊 Dashboard
 
-It displays:
+View total spending, average expense, and category summaries
 
-- Total number of expenses
-- Total amount spent
-- Recent expenses
-- Expense categories
-- Interactive dashboard interface
+💳 Expenses
 
-### 💳 Expense Management
+Add, view, edit, and delete expenses
 
-Users can manage their expenses through:
+🏷️ Categories
 
-- Add expense
-- View expenses
-- Update expense
-- Delete expense
-- Expense title
-- Amount
-- Category
-- Description
-- Creation date
+Organize expenses by category
 
-### 👤 Profile Management
+👤 Profile
 
-Users can:
+View and manage user information
 
-- View their profile
-- View account information
-- Update profile details
-- Access their profile through the application navigation
+🛡️ Protected Routes
 
-### 📱 Responsive UI
+User-specific data is protected through authentication
 
-The frontend includes:
+📱 Responsive UI
 
-- Responsive dashboard
-- Sidebar navigation
-- Mobile-friendly layout
-- Interactive navigation
-- Clean cards and sections
-- Login/Register interfaces
+Clean interface designed for different screen sizes
 
----
+🖥️ Application Preview
 
-## 🛠️ Tech Stack
+📊 Dashboard
 
-### Frontend
+Add your dashboard screenshot here.
 
-- React
-- TypeScript
-- Vite
-- Axios
-- React Router
-- CSS
+┌──────────────────────────────────────────────────────────┐
+│ ExpenseFlow                              + Add Expense    │
+├───────────────┬──────────────────────────────────────────┤
+│ Dashboard     │  Total Spending     Average Expense      │
+│ Expenses      │     ₹77,000             ₹12,833          │
+│ Profile       │                                          │
+│               │  Recent Expenses     Spending by Category│
+│               │  ───────────────     ──────────────────  │
+│               │  Laptop ₹65,000          Electronics     │
+│               │  Food   ₹2,500           Food            │
+└───────────────┴──────────────────────────────────────────┘
 
-### Backend
+🔑 Authentication
 
-- Node.js
-- Express.js
-- TypeScript
-- JWT
-- REST API
+The application includes dedicated Login and Register pages with protected dashboard access.
 
-### Database
+👤 Profile
 
-- PostgreSQL
-- Prisma ORM
+Users can access their profile and manage their account information.
 
-### Development Tools
+🧰 Tech Stack
 
-- VS Code
-- Git
-- GitHub
-- npm
+Frontend
 
----
+⚛️ React
 
-## 🏗️ Project Architecture
+📘 TypeScript
 
-```text
+⚡ Vite
+
+🔄 Axios
+
+🧭 React Router
+
+🎨 CSS
+
+Backend
+
+🟢 Node.js
+
+🚂 Express.js
+
+📘 TypeScript
+
+🔐 JWT Authentication
+
+Database
+
+🐘 PostgreSQL
+
+🔷 Prisma ORM
+
+🏗️ Architecture
+
+                         ┌─────────────────┐
+                         │      USER       │
+                         └────────┬────────┘
+                                  │
+                                  ▼
+                    ┌─────────────────────────┐
+                    │    React + TypeScript   │
+                    │         Frontend        │
+                    └────────────┬────────────┘
+                                 │
+                              Axios
+                                 │
+                                 ▼
+                    ┌─────────────────────────┐
+                    │     Express REST API    │
+                    └────────────┬────────────┘
+                                 │
+                         JWT Authentication
+                                 │
+                                 ▼
+                    ┌─────────────────────────┐
+                    │ Controllers / Services  │
+                    └────────────┬────────────┘
+                                 │
+                              Prisma
+                                 │
+                                 ▼
+                    ┌─────────────────────────┐
+                    │       PostgreSQL        │
+                    └─────────────────────────┘
+
+📂 Project Structure
+
 ExpenseFlow/
 │
 ├── client/
-│   ├── public/
-│   │
 │   ├── src/
 │   │   ├── components/
-│   │   │   └── Layout.tsx
-│   │   │
 │   │   ├── hooks/
-│   │   │   └── useDashboard.ts
-│   │   │
 │   │   ├── pages/
-│   │   │   ├── Analytics.tsx
-│   │   │   ├── Dashboard.tsx
-│   │   │   ├── Expenses.tsx
-│   │   │   ├── Login.tsx
-│   │   │   ├── Profile.tsx
-│   │   │   └── Register.tsx
-│   │   │
 │   │   ├── routes/
-│   │   │   └── AppRoutes.tsx
-│   │   │
-│   │   ├── services/
-│   │   │   └── api.ts
-│   │   │
-│   │   ├── App.tsx
-│   │   ├── App.css
-│   │   └── main.tsx
-│   │
-│   ├── package.json
-│   └── vite.config.ts
+│   │   └── services/
+│   └── package.json
 │
 ├── server/
 │   ├── prisma/
@@ -173,44 +167,28 @@ ExpenseFlow/
 │   │
 │   ├── src/
 │   │   ├── config/
-│   │   │   └── prisma.ts
-│   │   │
 │   │   ├── controllers/
-│   │   │   ├── auth.controller.ts
-│   │   │   ├── dashboard.controller.ts
-│   │   │   ├── expense.controller.ts
-│   │   │   └── user.controller.ts
-│   │   │
 │   │   ├── middleware/
-│   │   │   └── auth.middleware.ts
-│   │   │
 │   │   ├── routes/
-│   │   │   ├── auth.routes.ts
-│   │   │   ├── dashboard.routes.ts
-│   │   │   ├── expense.routes.ts
-│   │   │   └── user.routes.ts
-│   │   │
-│   │   ├── services/
-│   │   │   ├── auth.service.ts
-│   │   │   ├── dashboard.service.ts
-│   │   │   └── expense.service.ts
-│   │   │
-│   │   ├── app.ts
-│   │   └── server.ts
+│   │   └── services/
 │   │
-│   ├── package.json
-│   └── tsconfig.json
+│   └── package.json
 │
 ├── .gitignore
 └── README.md
 
-Setup and Installation
+🚀 Getting Started
 
-Prerequisites
+<details>
+<summary><b>1️⃣ Prerequisites</b></summary>
 
-Make sure the following are installed:
+<br/>
 
-Node.js and npm
+Install the following before starting:
+
+Node.js
+
+npm
 
 PostgreSQL
 
@@ -221,19 +199,35 @@ Check Node.js and npm:
 node --version
 npm --version
 
-1. Clone the Repository
+Make sure PostgreSQL is installed and running.
+
+</details>
+
+<details>
+<summary><b>2️⃣ Clone the Repository</b></summary>
+
+<br/>
 
 git clone https://github.com/Sanju701ydv/ExpenseFlow.git
 cd ExpenseFlow
 
-2. Backend Setup
+</details>
 
-Open a terminal and run:
+<details>
+<summary><b>3️⃣ Backend Setup</b></summary>
+
+<br/>
+
+Navigate to the server:
 
 cd server
 npm install
 
-Create a file named .env inside the server folder:
+Create:
+
+server/.env
+
+Add:
 
 DATABASE_URL="your_postgresql_connection_string"
 JWT_SECRET="your_jwt_secret"
@@ -243,7 +237,7 @@ Generate Prisma Client:
 
 npx prisma generate
 
-Run the database migration:
+Run migrations:
 
 npx prisma migrate dev
 
@@ -251,39 +245,67 @@ Start the backend:
 
 npm run dev
 
-The backend runs on:
+Backend:
 
 http://localhost:5000
 
-3. Frontend Setup
+</details>
 
-Open a second terminal:
+<details>
+<summary><b>4️⃣ Frontend Setup</b></summary>
+
+<br/>
+
+Open a new terminal:
 
 cd client
 npm install
 npm run dev
 
-Vite will display the frontend URL in the terminal.
+Open the Vite URL displayed in your terminal.
 
-Open that URL in your browser.
+</details>
 
-4. Run the Application
+<details>
+<summary><b>5️⃣ Run the Complete Application</b></summary>
 
-Keep both terminals running:
+<br/>
 
-Terminal 1 → Backend  → Node.js + Express
-Terminal 2 → Frontend → React + Vite
-Database   → PostgreSQL
+You need two terminals.
 
-Register a new account or log in to start using ExpenseFlow.
+Terminal 1 — Backend
 
-Environment Variables
+cd server
+npm run dev
 
-The backend requires these environment variables:
+Terminal 2 — Frontend
 
-Variable         Purpose
+cd client
+npm run dev
 
-DATABASE_URL   PostgreSQL database connectionJWT_SECRET     Secret used for JWT authenticationPORT           Backend server port
+Then open the frontend URL in your browser.
+
+</details>
+
+🔐 Environment Variables
+
+The backend uses environment variables for sensitive configuration.
+
+Variable
+
+Purpose
+
+DATABASE_URL
+
+PostgreSQL connection string
+
+JWT_SECRET
+
+JWT signing secret
+
+PORT
+
+Backend port
 
 Example:
 
@@ -291,80 +313,216 @@ DATABASE_URL="postgresql://username:password@localhost:5432/expenseflow"
 JWT_SECRET="your_secure_secret"
 PORT=5000
 
-Important: Never commit .env to GitHub. Keep your PostgreSQLpassword, database credentials, and JWT secret private.
+⚠️ Never commit your .env file.
 
-API Endpoints
+Keep your PostgreSQL password, database credentials, and JWT secret private.
 
-Authentication
+🔌 API Reference
 
-Method   Endpoint               Description
+<details>
+<summary><b>🔐 Authentication API</b></summary>
 
-POST     /api/auth/register   Register a userPOST     /api/auth/login      Login
+<br/>
 
-Dashboard
+Method
 
-Method   Endpoint           Description
+Endpoint
 
-GET      /api/dashboard   Get dashboard data
+Purpose
 
-Expenses
+POST
 
-Method   Endpoint              Description
+/api/auth/register
 
-GET      /api/expenses       Get all expensesGET      /api/expenses/:id   Get an expensePOST     /api/expenses       Create an expensePUT      /api/expenses/:id   Update an expenseDELETE   /api/expenses/:id   Delete an expense
+Register a new user
 
-User
+POST
 
-Method   Endpoint              Description
+/api/auth/login
 
-GET      /api/user/profile   Get user profile
+Login
 
-Authentication
+</details>
 
-ExpenseFlow uses JWT authentication to protect user-specific API routes.
+<details>
+<summary><b>📊 Dashboard API</b></summary>
+
+<br/>
+
+Method
+
+Endpoint
+
+Purpose
+
+GET
+
+/api/dashboard
+
+Get dashboard information
+
+</details>
+
+<details>
+<summary><b>💳 Expense API</b></summary>
+
+<br/>
+
+Method
+
+Endpoint
+
+Purpose
+
+GET
+
+/api/expenses
+
+Get all expenses
+
+GET
+
+/api/expenses/:id
+
+Get one expense
+
+POST
+
+/api/expenses
+
+Create expense
+
+PUT
+
+/api/expenses/:id
+
+Update expense
+
+DELETE
+
+/api/expenses/:id
+
+Delete expense
+
+</details>
+
+<details>
+<summary><b>👤 User API</b></summary>
+
+<br/>
+
+Method
+
+Endpoint
+
+Purpose
+
+GET
+
+/api/user/profile
+
+Get logged-in user's profile
+
+</details>
+
+🔒 Authentication Flow
+
+Register / Login
+       │
+       ▼
+   JWT Token
+       │
+       ▼
+Stored on Client
+       │
+       ▼
+Axios Interceptor
+       │
+       ▼
+Authorization Header
+       │
+       ▼
+Express Auth Middleware
+       │
+       ▼
+Protected API Route
 
 Authenticated requests use:
 
 Authorization: Bearer <JWT_TOKEN>
 
-Application Flow
+🧪 Main User Flow
 
-User
-  ↓
-React + Vite
-  ↓
-Axios
-  ↓
-Express REST API
-  ↓
-JWT Authentication
-  ↓
-Controllers / Services
-  ↓
-Prisma ORM
-  ↓
-PostgreSQL
+        ┌──────────┐
+        │ Register │
+        └────┬─────┘
+             │
+             ▼
+        ┌──────────┐
+        │  Login   │
+        └────┬─────┘
+             │
+             ▼
+       ┌─────────────┐
+       │  Dashboard  │
+       └──────┬──────┘
+              │
+      ┌───────┼────────┐
+      ▼       ▼        ▼
+   Expenses Profile  Analytics
+      │
+      ▼
+ Add / Edit / Delete
+      │
+      ▼
+   PostgreSQL
 
-Future Improvements
+🛡️ Security
 
-Advanced analytics
+ExpenseFlow includes:
 
-Budget tracking
+JWT authentication
 
-Receipt uploads
+Protected API routes
 
-CSV/PDF export
+User-specific expense access
 
-Recurring expenses
+Environment-based secrets
 
-Cloud deployment
+PostgreSQL credentials excluded from Git
 
-Author
+.env excluded through .gitignore
+
+📈 Future Improvements
+
+📊 Advanced analytics
+
+💰 Budget tracking
+
+🔎 Expense search and filtering
+
+🧾 Receipt uploads
+
+📄 CSV/PDF export
+
+🔁 Recurring expenses
+
+☁️ Cloud deployment
+
+📱 Improved mobile experience
+
+👩‍💻 Author
 
 Samjhana Yadav
 
-GitHub: https://github.com/Sanju701ydv
+🎓 B.Tech — Computer Science / AI & Data Science
 
-License
+🔗 GitHub:https://github.com/Sanju701ydv
 
-This project was developed for learning, portfolio, and demonstrationpurposes.
+<div align="center">
+
+⭐ If you find ExpenseFlow useful, consider giving the repository a star!
+
+Built with React • Node.js • PostgreSQL • Prisma
+
+</div>
