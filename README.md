@@ -204,18 +204,36 @@ ExpenseFlow/
 ├── .gitignore
 └── README.md
 
-Clone the Repository
+Setup and Installation
+
+Prerequisites
+
+Make sure the following are installed:
+
+Node.js and npm
+
+PostgreSQL
+
+Git
+
+Check Node.js and npm:
+
+node --version
+npm --version
+
+1. Clone the Repository
+
 git clone https://github.com/Sanju701ydv/ExpenseFlow.git
 cd ExpenseFlow
 
-Backend Setup
+2. Backend Setup
 
-Open a terminal:
+Open a terminal and run:
 
 cd server
 npm install
 
-Create a .env file inside the server folder:
+Create a file named .env inside the server folder:
 
 DATABASE_URL="your_postgresql_connection_string"
 JWT_SECRET="your_jwt_secret"
@@ -225,7 +243,7 @@ Generate Prisma Client:
 
 npx prisma generate
 
-Run database migrations:
+Run the database migration:
 
 npx prisma migrate dev
 
@@ -233,78 +251,120 @@ Start the backend:
 
 npm run dev
 
-Backend:
+The backend runs on:
 
 http://localhost:5000
+
 3. Frontend Setup
 
-Open another terminal:
+Open a second terminal:
 
 cd client
 npm install
 npm run dev
 
-The frontend will run on the Vite development URL shown in the terminal.
+Vite will display the frontend URL in the terminal.
+
+Open that URL in your browser.
 
 4. Run the Application
 
-Make sure both servers are running:
+Keep both terminals running:
 
-Frontend → React + Vite
-Backend  → Node.js + Express
-Database → PostgreSQL
+Terminal 1 → Backend  → Node.js + Express
+Terminal 2 → Frontend → React + Vite
+Database   → PostgreSQL
 
-Open the frontend URL in your browser and register/login to use ExpenseFlow.
+Register a new account or log in to start using ExpenseFlow.
 
-🔐 Environment Variables
+Environment Variables
 
-Sensitive credentials are stored using environment variables and are not included in the repository.
+The backend requires these environment variables:
 
-Required variables:
+Variable         Purpose
 
-DATABASE_URL="your_postgresql_connection_string"
-JWT_SECRET="your_jwt_secret"
+DATABASE_URL   PostgreSQL database connectionJWT_SECRET     Secret used for JWT authenticationPORT           Backend server port
+
+Example:
+
+DATABASE_URL="postgresql://username:password@localhost:5432/expenseflow"
+JWT_SECRET="your_secure_secret"
 PORT=5000
 
-Never commit your .env file or expose your PostgreSQL password or JWT secret.
+Important: Never commit .env to GitHub. Keep your PostgreSQLpassword, database credentials, and JWT secret private.
 
-📌 API Endpoints
-Method	Endpoint	Description
-POST	/api/auth/register	Register a new user
-POST	/api/auth/login	Login
-GET	/api/dashboard	Get dashboard data
-GET	/api/expenses	Get expenses
-GET	/api/expenses/:id	Get a specific expense
-POST	/api/expenses	Create expense
-PUT	/api/expenses/:id	Update expense
-DELETE	/api/expenses/:id	Delete expense
-GET	/api/user/profile	Get user profile
-🔒 Security
+API Endpoints
 
-ExpenseFlow uses JWT authentication to protect user-specific routes and data.
+Authentication
 
-Sensitive information such as:
+Method   Endpoint               Description
 
-PostgreSQL credentials
-Database connection strings
-JWT secrets
+POST     /api/auth/register   Register a userPOST     /api/auth/login      Login
 
-is stored in environment variables and excluded from Git.
+Dashboard
 
-👩‍💻 Author
+Method   Endpoint           Description
+
+GET      /api/dashboard   Get dashboard data
+
+Expenses
+
+Method   Endpoint              Description
+
+GET      /api/expenses       Get all expensesGET      /api/expenses/:id   Get an expensePOST     /api/expenses       Create an expensePUT      /api/expenses/:id   Update an expenseDELETE   /api/expenses/:id   Delete an expense
+
+User
+
+Method   Endpoint              Description
+
+GET      /api/user/profile   Get user profile
+
+Authentication
+
+ExpenseFlow uses JWT authentication to protect user-specific API routes.
+
+Authenticated requests use:
+
+Authorization: Bearer <JWT_TOKEN>
+
+Application Flow
+
+User
+  ↓
+React + Vite
+  ↓
+Axios
+  ↓
+Express REST API
+  ↓
+JWT Authentication
+  ↓
+Controllers / Services
+  ↓
+Prisma ORM
+  ↓
+PostgreSQL
+
+Future Improvements
+
+Advanced analytics
+
+Budget tracking
+
+Receipt uploads
+
+CSV/PDF export
+
+Recurring expenses
+
+Cloud deployment
+
+Author
 
 Samjhana Yadav
 
 GitHub: https://github.com/Sanju701ydv
 
-📄 License
+License
 
-This project was developed for learning, portfolio, and demonstration purposes.
-
-
-After replacing your current README, run:
-
-```powershell
-git add README.md
-git commit -m "Add complete project README"
-git push
+This project was developed for learning, portfolio, and demonstrationpurposes.
