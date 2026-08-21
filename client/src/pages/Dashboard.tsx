@@ -7,7 +7,6 @@ import {
   FiPlus,
   FiTrendingUp,
   FiShoppingBag,
-  FiHome,
   FiShoppingCart,
   FiFileText,
 } from "react-icons/fi";
@@ -32,39 +31,28 @@ interface Expense {
 }
 
 function Dashboard() {
-
   const [expenses, setExpenses] = useState<Expense[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-
     const loadExpenses = async () => {
-
       try {
-
         const response = await api.get("/expenses");
 
         setExpenses(
           response.data.expenses || []
         );
-
       } catch (error) {
-
         console.error(
           "Dashboard error:",
           error
         );
-
       } finally {
-
         setLoading(false);
-
       }
-
     };
 
     loadExpenses();
-
   }, []);
 
   /* =====================================================
@@ -89,18 +77,15 @@ function Dashboard() {
   ===================================================== */
 
   const categoryData = useMemo(() => {
-
     const categories: Record<
       string,
       number
     > = {};
 
     expenses.forEach((expense) => {
-
       categories[expense.category] =
         (categories[expense.category] || 0) +
         Number(expense.amount);
-
     });
 
     return Object.entries(categories).map(
@@ -109,7 +94,6 @@ function Dashboard() {
         value,
       })
     );
-
   }, [expenses]);
 
   /* =====================================================
@@ -132,7 +116,6 @@ function Dashboard() {
   const getCategoryIcon = (
     category: string
   ) => {
-
     const value =
       category.toLowerCase();
 
@@ -158,7 +141,6 @@ function Dashboard() {
     }
 
     return <FiCreditCard />;
-
   };
 
   /* =====================================================
@@ -173,11 +155,9 @@ function Dashboard() {
   ===================================================== */
 
   const formatMoney = (amount: number) => {
-
     return `₹${amount.toLocaleString(
       "en-IN"
     )}`;
-
   };
 
   /* =====================================================
@@ -185,7 +165,6 @@ function Dashboard() {
   ===================================================== */
 
   return (
-
     <div>
 
       {/* =================================================
@@ -644,7 +623,6 @@ function Dashboard() {
                   </div>
 
                 );
-
               }
             )}
 
@@ -655,7 +633,6 @@ function Dashboard() {
       </div>
 
     </div>
-
   );
 }
 
