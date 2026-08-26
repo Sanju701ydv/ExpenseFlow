@@ -10,14 +10,39 @@ Track expenses • Analyze spending • Manage your profile • Stay organized
 
 <br/>
 
+[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-ExpenseFlow-6366F1?style=for-the-badge)](https://expense-flow-frontend-7jym.onrender.com)
+[![Backend API](https://img.shields.io/badge/⚡%20Backend%20API-Render-00C7B7?style=for-the-badge)](https://expenseflow-backend-w6i6.onrender.com)
+
+<br/>
+
 ![React](https://img.shields.io/badge/React-18+-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-Blue?style=for-the-badge&logo=typescript&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-Green?style=for-the-badge&logo=node.js&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Prisma](https://img.shields.io/badge/Prisma-ORM-2D3748?style=for-the-badge&logo=prisma&logoColor=white)
-
 <br/>
 
+**🔐 Secure Authentication &nbsp; • &nbsp; 📊 Interactive Dashboard &nbsp; • &nbsp; 💳 Expense Management**
+
+</div>
+
+---
+
+## 🌐 Live Application
+
+### 🚀 Live Demo
+
+👉 **[Open ExpenseFlow](https://expense-flow-frontend-7jym.onrender.com)**
+
+The frontend application is deployed on **Render** and connected to the deployed backend API.
+
+### ⚡ Backend API
+
+👉 **[ExpenseFlow Backend API](https://expenseflow-backend-w6i6.onrender.com)**
+
+The backend REST API is deployed on **Render** and connected to PostgreSQL through Prisma ORM.
+
+### 🔗 Deployment Architecture
 **🔐 Secure Authentication &nbsp; • &nbsp; 📊 Interactive Dashboard &nbsp; • &nbsp; 💳 Expense Management**
 
 </div>
