@@ -1,3 +1,5 @@
+# ExpenseFlow
+
 ## 📌 About
 
 **ExpenseFlow** is a full-stack expense management application built with **React, TypeScript, Node.js, Express, Prisma, and PostgreSQL**.
@@ -9,18 +11,18 @@ It helps users track expenses, analyze spending, and manage their profiles throu
 ## ✨ What You Can Do
 
 - 🔐 Register & Login with JWT authentication
-- 💳 Add, edit, and delete expenses
-- 📊 View spending summaries
-- 🏷️ Analyze expenses by category
-- 👤 Manage profile
-- 📱 Responsive interface
+- 💳 Add, edit, view, and delete expenses
+- 📊 View total spending and expense summaries
+- 🏷️ Analyze spending by category
+- 👤 Manage user profile
+- 📱 Use a responsive interface
 
 ---
 
 ## 🖥️ Application Preview
 
 ### 📊 Dashboard
-View total expenses, total spending, average expense, recent transactions, and category-wise spending.
+View total expenses, total spending, average expense, recent transactions, and category-wise spending with an interactive pie chart.
 
 ### 🔐 Authentication
 Secure Login and Register pages with JWT authentication.
@@ -47,7 +49,7 @@ View and manage user information.
 
 ## 🏗️ System Architecture
 
-```text
+```
 React + TypeScript
         ↓
       Axios
@@ -59,8 +61,13 @@ JWT Authentication
     Prisma ORM
         ↓
    PostgreSQL
+```
 
-📂 Project Structure
+---
+
+## 📂 Project Structure
+
+```
 ExpenseFlow/
 ├── client/
 │   └── src/
@@ -78,128 +85,216 @@ ExpenseFlow/
 │       └── services/
 │
 └── README.md
-🚀 Getting Started
-Clone
+```
+
+---
+
+## 🚀 Getting Started
+
+### Clone the Repository
+```bash
 git clone https://github.com/Sanju701ydv/ExpenseFlow.git
 cd ExpenseFlow
-Backend
+```
+
+### Backend Setup
+```bash
 cd server
 npm install
 npx prisma generate
 npx prisma migrate dev
 npm run dev
-Frontend
+```
+
+### Frontend Setup
+
+Open a new terminal:
+```bash
 cd client
 npm install
 npm run dev
-🔐 Environment Variables
+```
 
-Create server/.env:
+---
 
+## 🔐 Environment Variables
+
+Create `server/.env`:
+
+```env
 DATABASE_URL="your_postgresql_connection"
 JWT_SECRET="your_secret"
 PORT=5000
+```
 
-Never commit .env or expose your credentials.
+⚠️ Never commit `.env` or expose your credentials.
 
-☁️ Deployment
+---
 
-Frontend:
-https://expense-flow-frontend-7jym.onrender.com
+## ☁️ Deployment
 
-Backend:
-https://expenseflow-backend-w6i6.onrender.com
+🚀 **Frontend:** https://expense-flow-frontend-7jym.onrender.com
 
-Repository:
-https://github.com/Sanju701ydv/ExpenseFlow
+⚡ **Backend:** https://expenseflow-backend-w6i6.onrender.com
 
-🔌 API Reference
-Authentication
+🐙 **Repository:** https://github.com/Sanju701ydv/ExpenseFlow
+
+---
+
+## 🔌 API Reference
+
+### 🔐 Authentication
+```
 POST /api/auth/register
 POST /api/auth/login
-Expenses
+```
+
+### 💳 Expenses
+```
 GET    /api/expenses
 GET    /api/expenses/:id
 POST   /api/expenses
 PUT    /api/expenses/:id
 DELETE /api/expenses/:id
-Dashboard
+```
+
+### 📊 Dashboard
+```
 GET /api/dashboard
-🔒 Authentication Flow
+```
+
+---
+
+## 🔒 Authentication Flow
+
+```
 Register / Login
        ↓
     JWT Token
        ↓
 Axios Interceptor
        ↓
+Authorization Header
+       ↓
 Protected API
-🧪 Main User Flow
+       ↓
+PostgreSQL
+```
+
+---
+
+## 🧪 Main User Flow
+
+```
 Register → Login → Dashboard
                     ↓
-          Expenses / Profile / Analytics
-🛡️ Security
-JWT authentication
-Protected API routes
-User-specific expense data
-Environment-based secrets
-.env excluded from Git
-📊 Dashboard Analytics
-Total expenses
-Total spending
-Average expense
-Recent expenses
-Category-wise spending
-Interactive pie chart
-🧪 Production API
+          ┌─────────┼─────────┐
+          ↓         ↓         ↓
+      Expenses    Profile   Analytics
+          ↓
+   Add / Edit / Delete
+```
 
-Test the backend:
+---
 
+## 🛡️ Security
+
+- JWT authentication
+- Protected API routes
+- User-specific expense data
+- Environment-based secrets
+- `.env` excluded from Git
+
+---
+
+## 📊 Dashboard Analytics
+
+- Total expenses
+- Total spending
+- Average expense
+- Recent expenses
+- Category-wise spending
+- Interactive pie chart
+
+---
+
+## 🧪 Testing the Production API
+
+Open:
+```
 https://expenseflow-backend-w6i6.onrender.com
+```
 
 Expected response:
-
+```json
 {
   "success": true,
   "message": "ExpenseFlow API is Running 🚀"
 }
-🐙 Git Workflow
+```
+
+---
+
+## 🐙 Git Workflow
+
+```bash
 git add .
 git commit -m "Update ExpenseFlow"
 git push origin main
-📈 Future Improvements
-💰 Budget tracking
-📊 Advanced analytics
-🔎 Expense filtering
-🧾 Receipt uploads
-📄 CSV/PDF export
-🔐 Forgot password
-📱 Improved mobile experience
-🎯 Project Highlights
-Full-stack development
-REST API
-JWT authentication
-PostgreSQL + Prisma
-React + TypeScript
-Responsive UI
-Cloud deployment with Render
-👩‍💻 Author
-Samjhana Yadav
+```
+
+---
+
+## 📈 Future Improvements
+
+- 💰 Budget tracking
+- 📊 Advanced analytics
+- 🔎 Expense filtering
+- 🧾 Receipt uploads
+- 📄 CSV/PDF export
+- 🔐 Forgot password
+- 📱 Improved mobile experience
+
+---
+
+## 🎯 Project Highlights
+
+- Full-stack web application
+- REST API architecture
+- JWT authentication
+- PostgreSQL + Prisma ORM
+- React + TypeScript frontend
+- Responsive dashboard
+- Interactive expense analytics
+- Cloud deployment with Render
+- GitHub version control
+
+---
+
+## 👩‍💻 Author
+
+**Samjhana Yadav**
 
 🎓 B.Tech — Computer Science / AI & Data Science
 
-🐙 GitHub
+🐙 GitHub: https://github.com/Sanju701ydv
 
-🌟 Live Links
+---
 
-🚀 Live Application
+## 🌟 Live Links
 
-⚡ Backend API
+🚀 **Live Application:** https://expense-flow-frontend-7jym.onrender.com
 
-🐙 GitHub Repository
+⚡ **Backend API:** https://expenseflow-backend-w6i6.onrender.com
+
+🐙 **GitHub Repository:** https://github.com/Sanju701ydv/ExpenseFlow
+
+---
 
 <div align="center">
+
 ⭐ Built with React • Node.js • PostgreSQL • Prisma
 
-ExpenseFlow — Track • Analyze • Manage
+**ExpenseFlow — Track • Analyze • Manage**
 
-</div> ```
+</div>
