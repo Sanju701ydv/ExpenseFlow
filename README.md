@@ -133,7 +133,7 @@ PORT=5000
 
 ## ☁️ Deployment
 
-🚀 **Frontend:** https://expense-flow-frontend-7jym.onrender.com
+🚀 **Frontend:** https://expenseflow-frontend-1fw4.onrender.com
 
 ⚡ **Backend:** https://expenseflow-backend-w6i6.onrender.com
 
@@ -283,7 +283,7 @@ git push origin main
 
 ## 🌟 Live Links
 
-🚀 **Live Application:** https://expense-flow-frontend-7jym.onrender.com
+🚀 **Live Application:** https://expenseflow-frontend-1fw4.onrender.com
 
 ⚡ **Backend API:** https://expenseflow-backend-w6i6.onrender.com
 
