@@ -14,12 +14,13 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "http://localhost:5173", // Local React development
-      "https://expense-flow-frontend-7jvm.onrender.com", // Production frontend
+      "http://localhost:5173",
+      "https://expenseflow-frontend-1fw4.onrender.com",
     ],
     credentials: true,
   })
 );
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
